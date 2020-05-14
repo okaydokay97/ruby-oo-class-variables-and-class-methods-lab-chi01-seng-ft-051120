@@ -31,7 +31,6 @@ class Song
   def self.genre_count
     self.genres.each do |genre_name|
      count = @@genres.find_all{|genre| genre == genre_name}.length
-      @@all_genres_count["#{genre_name}"] = nil
       @@all_genres_count["#{genre_name}"] = count
     end
     @@all_genres_count
@@ -40,7 +39,6 @@ class Song
   def self.artist_count
     self.artists.each do |artist_name|
      count = @@artists.find_all{|artist| artist == artist_name}.length
-      @@all_artists_count["#{artist_name}"] = nil
       @@all_artists_count["#{artist_name}"] = count
     end
     @@all_artists_count
